@@ -89,4 +89,6 @@ Create a IOS or Android or Web Application which shows the statics for each devi
 * Displays data
 
 
+Android and Web App coming soon.
+
 
