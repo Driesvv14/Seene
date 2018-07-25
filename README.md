@@ -42,6 +42,22 @@ firebase_admin.initialize_app(cred, {
 NOTICE: The .json file should be at the same directory level as the Python script.
 
 
+NOTICE: When creating a database you have to select private or public. These rules determine who can write to your database.
+        When private you won't be able to write to your database and with public everyone can write to it.
+        
+        Solution:
+        
+        These Firebase require authentication which is done by our .json file from the Firebase admin sdk.
+        
+        // These rules require authentication
+        {
+          "rules": {
+            ".read": "auth != null",
+            ".write": "auth != null"
+          }
+        }
+
+
 ## Step Three
 Run the script and the data collected on the device should appear in the Firebase database.
 This with their own name under the parent DEVICE.
