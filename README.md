@@ -1,8 +1,10 @@
 # Seene
 
 This project is about to build a Python script running on a Raspberry Pi, to collect data from the device and post it to the Firebase.
-
-
+This script collects:
+* CPU Percentage
+* RAM Usage
+* Disk Usage
 
 ## Requirements
 - A Raspberry Pi or Windows or Mac
