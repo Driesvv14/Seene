@@ -25,10 +25,12 @@ YOUR DOWNLOADED JSON FILE AND DATABASE URL
 
 Your database url can be found in the Firebase console in the database tab. The link above in your database.
 
-cred = credentials.Certificate("./YOUR-firebase-adminsdk-FILE.json")
+cred = credentials.Certificate("./YOUR-firebase-adminsdk-FILE-NAME.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL' : 'YOUR-DATABASE-URL'
 })
+
+NOTICE: The .json file should be at the same directory level as the Python script.
 
 
 ## Step Three
