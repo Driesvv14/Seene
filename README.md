@@ -62,13 +62,13 @@ On Windows:
     Change this lines:
     
     pcName = getName.translate(None, "(){}<>-.")
-
+    
     
     To:
     
     pcName = socket.gethostname()
     
-    
+    This because on Windows Python raises an error on the amount of translation arguments.
     
 
 ## Step Three
