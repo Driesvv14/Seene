@@ -11,7 +11,16 @@ This script collects:
 - Python installed (with the libraries which are imported in the Python script)
 - A Firebase-project and the Firebase-admin.json file
 
+## Installation Libraries
 
+Firebase
+
+pip install firebase-admin
+
+
+Psutil
+
+pip install psutil
 
 ## Step One
 Create a Firebase-project and download the .json file from the console.
