@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smarthomebg" translatesAutoresizingMaskIntoConstraints="NO" id="WDx-Vb-YpL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J4Y-gG-hzP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SEENE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zok-OA-IXs">
+                                <rect key="frame" x="94" y="292" width="174" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="60"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J4Y-gG-hzP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1pc-5w-fJF"/>
+                            <constraint firstItem="WDx-Vb-YpL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2mS-2L-6sh"/>
+                            <constraint firstItem="WDx-Vb-YpL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7TX-WC-P3M"/>
+                            <constraint firstItem="WDx-Vb-YpL" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="CcB-Ke-gKO"/>
+                            <constraint firstItem="J4Y-gG-hzP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J4X-xS-DKm"/>
+                            <constraint firstItem="WDx-Vb-YpL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QM7-do-Oqg"/>
+                            <constraint firstItem="J4Y-gG-hzP" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cIc-cc-R7O"/>
+                            <constraint firstItem="J4Y-gG-hzP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eIo-x2-zD3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="smarthomebg" width="4951" height="3301"/>
+    </resources>
+</document>
