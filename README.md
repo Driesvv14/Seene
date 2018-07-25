@@ -79,3 +79,10 @@ This with their own name under the parent DEVICE.
 Run the script on the terminal by the following command:
 
     python Seene.py
+
+## Step Four
+Create a IOS Application which shows the statics for each device you are running the script on.
+
+
+Android version on the way.
+
