@@ -83,6 +83,10 @@ Run the script on the terminal by the following command:
 ## Step Four
 Create a IOS Application which shows the statics for each device you are running the script on.
 
+* Launch App
+* Authentication (basic email Firebase)
+* Select device
+* Displays data
 
 Android version on the way.
 
