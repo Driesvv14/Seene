@@ -68,7 +68,7 @@ On Windows:
     
     pcName = socket.gethostname()
     
-    This because on Windows Python raises an error on the amount of translation arguments.
+This because on Windows Python raises an error on the amount of translation arguments.
     
 
 ## Step Three
