@@ -34,10 +34,10 @@ YOUR DOWNLOADED JSON FILE AND DATABASE URL
 
 Your database url can be found in the Firebase console in the database tab. The link above in your database.
 
-cred = credentials.Certificate("./YOUR-firebase-adminsdk-FILE-NAME.json")
-firebase_admin.initialize_app(cred, {
-    'databaseURL' : 'YOUR-DATABASE-URL'
-})
+    cred = credentials.Certificate("./YOUR-firebase-adminsdk-FILE-NAME.json")
+    firebase_admin.initialize_app(cred, {
+        'databaseURL' : 'YOUR-DATABASE-URL'
+    })
 
 NOTICE: The .json file should be at the same directory level as the Python script.
 
@@ -57,7 +57,25 @@ NOTICE: When creating a database you have to select private or public. These rul
           }
         }
 
+On Windows:
+
+    Change this lines:
+    
+    pcName = getName.translate(None, "(){}<>-.")
+
+    
+    To:
+    
+    pcName = socket.gethostname()
+    
+    
+    
 
 ## Step Three
 Run the script and the data collected on the device should appear in the Firebase database.
 This with their own name under the parent DEVICE.
+
+
+Run the script on the terminal by the following command:
+
+    python Seene.py
