@@ -95,6 +95,5 @@ The App:
 * Displays data
 
 
-Web App coming soon...
 
 
