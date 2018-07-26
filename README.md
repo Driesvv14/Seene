@@ -1,6 +1,6 @@
 # Seene
 
-This project is about to build a Python script running on a Raspberry Pi, to collect data from the device and post it to Firebase.
+This project is about to build a Python script running on a Raspberry Pi, to collect data from the device and post it to Firebase. Next we build a IOS, Android and Web App on based on this data.
 This script collects:
 * CPU Percentage
 * RAM Usage
@@ -82,6 +82,10 @@ Run the script on the terminal by the following command:
 
 ## Step Four
 Create a IOS or Android or Web Application which shows the statics for each device you are running the script on.
+
+The setup of all the three applications with the Firebase console can be found in the Firebase Docs.
+
+[Firebase Documentation](https://firebase.google.com/docs/ "Firebase Docs")
 
 * Launch App
 * Authentication (basic email Firebase)
