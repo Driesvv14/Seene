@@ -40,9 +40,6 @@ class ViewController: UIViewController {
                 self.txt_wachtwoord.text = "";
             }
         }
-        
-        
     }
-    
 }
 
