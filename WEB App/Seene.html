@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Seene</title>
+
+    <!-- Firebase Connection -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+
+    <!-- This Firebase config can be retrieved when you first add your webapp in the console. Copy Paste it in here -->
+    
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "YOUR-API-KEY",
+            authDomain: "YOUR-AUTH-DOMAIN",
+            databaseURL: "YOUR-DATABASE-URL",
+            projectId: "YOUR-PROJECT-ID",
+            storageBucket: "YOUR-STORAGE-BUCKET",
+            messagingSenderId: "YOUR-MESSAGE-SENDER-ID"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <style>
+        .container {
+            width: 100%;
+        }
+        
+        fieldset {
+            width: 30%;
+        }
+        
+        legend {
+            background-color: #000;
+            color: #fff;
+            padding: 3px 6px;
+        }
+        
+        .output {
+            font: 1rem 'Fira Sans', sans-serif;
+        }
+        
+        label {
+            display: inline-block;
+            font-size: .9rem;
+            width: 35%;
+        }
+        
+        input[type='text'],
+        input[type='password'] {
+            width: 60%;
+        }
+        
+        input {
+            margin: .4rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Sign in</legend>
+
+            <div>
+                <label for="userName">E-mail address:</label>
+                <input type="text" id="email" name="email" required placeholder="E-mail address..." />
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password..." />
+            </div>
+
+            <input type="submit" value="Log in" id="btnLogin">
+        </fieldset>
+    </div>
+
+    <br>
+
+    <div id="devices">
+    </div>
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        
+        //Login handler on button click
+        
+        $("#btnLogin").click(function () {
+
+            //Get email and password
+            var email = $("#email").val();
+            var password = $("#password").val();
+
+            //Login and handle errors
+            firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                if (errorCode === 'auth/wrong-password') {
+                    alert('Wrong password.');
+                } else {
+                    alert(errorMessage);
+                }
+                console.log(error);
+            });
+
+            
+            //Check if user is loged in
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    //If user is loged in get devices
+                    
+                    const dbRefObject = firebase.database().ref().child('devices');
+
+                    
+                    //foreach device get data key and value and append to body
+                    dbRefObject.once('value', function (snapshot) {
+                        snapshot.forEach(function (childSnapshot) {
+                            console.log(childSnapshot.key);
+
+
+                            var para = document.createElement("p");
+                            var node = document.createTextNode(childSnapshot.key);
+                            para.appendChild(node);
+                            para.style.color = "red";
+
+                            $("body").append(para);
+
+
+                            childSnapshot.forEach(function (childSnapshot) {
+                                console.log(childSnapshot.key);
+                                console.log(childSnapshot.val());
+                                $("body").append(childSnapshot.key + ": " + childSnapshot.val() + "<br>");
+                            });
+
+                        });
+                    });
+
+                } else {
+                    // No user is signed in.
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
