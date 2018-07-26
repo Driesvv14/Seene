@@ -87,6 +87,8 @@ The setup of all the three applications with the Firebase console can be found i
 
 [Firebase Documentation](https://firebase.google.com/docs/ "Firebase Docs")
 
+The App:
+
 * Launch App
 * Authentication (basic email Firebase)
 * Select device
